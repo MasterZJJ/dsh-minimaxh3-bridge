@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "MiniMax H3 桥接服务",
+    "description": "把 MiniMax H3 v2 协议桥接服务作为 DSH 子进程托管：随 DSH 启动、退出即停。ComfyUI 地址、监听端口、对外 URL、鉴权都在插件配置里改，换工作流服务器不用动代码。",
+    "detail": "docs/DETAIL.md"
+  }
+}

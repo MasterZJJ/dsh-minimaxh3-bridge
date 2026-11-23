@@ -1,0 +1,74 @@
+{
+  "name": "dsh-minimax-bridge",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "description": "DeepSeek Harness plugin that runs the MiniMax H3 v2 video API as a managed child process in front of a self-hosted ComfyUI pika_h3 (MiniMaxH3ReferenceToVideo) workflow.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "minimax",
+    "minimax-h3",
+    "comfyui",
+    "pika-h3",
+    "video-generation",
+    "termux"
+  ],
+  "license": "MIT",
+  "author": "MasterZJJ",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MasterZJJ/dsh-minimaxh3-bridge.git"
+  },
+  "homepage": "https://github.com/MasterZJJ/dsh-minimaxh3-bridge#readme",
+  "bugs": {
+    "url": "https://github.com/MasterZJJ/dsh-minimaxh3-bridge/issues"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --check index.js && node --check client.js && python3 -m py_compile bridge/minimax_bridge.py bridge/h3_api.py",
+    "doctor": "sh scripts/doctor.sh",
+    "smoke": "sh scripts/smoke.sh"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./client": "./client.js"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "bridge",
+    "scripts",
+    "README.md",
+    "LICENSE",
+    "requirements.txt"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.1.0",
+    "@deepseek-ai/schemastery": "~3.19.0",
+    "@deepseek-ai/dsh-tools": "0.2.2-rc.5"
+  }
+}

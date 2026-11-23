@@ -1,0 +1,8 @@
+# 本插件的 Python 桥接服务只使用标准库（http.server / urllib / json / threading / pathlib …），
+# 因此不需要 pip 安装任何第三方包，系统自带 python3（>= 3.9）即可运行。
+#
+# 可选：ffmpeg（系统包，非 pip）用于 generate_audio=false 时去除音轨。
+#
+# 安装检查：
+#   python3 -V
+#   sh scripts/doctor.sh

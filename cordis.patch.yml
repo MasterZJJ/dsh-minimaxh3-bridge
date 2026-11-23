@@ -1,0 +1,16 @@
+# dsh-minimax-bridge bundle patch.
+# Inserts one Host plugin row. The bridge child process starts when this profile
+# boots with `enabled: true`; change comfyBase to point at a different workflow
+# server, and port/publicBase to change where clients reach the bridge.
+- insert:
+    - id: minimax-bridge
+      name: 'dsh-minimax-bridge'
+      config:
+        enabled: true
+        pythonPath: python3
+        comfyBase: http://127.0.0.1:8188
+        host: 0.0.0.0
+        port: 8099
+        publicBase: ''
+        apiKey: ''
+        workdir: ''

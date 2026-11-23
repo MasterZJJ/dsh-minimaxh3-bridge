@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="MiniMax H3 bridge">
+  <rect width="64" height="64" rx="14" fill="#1b2a3a"/>
+  <path d="M10 42c0-12 9-20 22-20s22 8 22 20" fill="none" stroke="#4fc3f7" stroke-width="4" stroke-linecap="round"/>
+  <path d="M18 42v10M46 42v10M14 46h36" stroke="#4fc3f7" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+  <path d="M27 30l12 6-12 6z" fill="#ffd166"/>
+</svg>

@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "MiniMax H3 bridge",
+    "description": "Runs the MiniMax H3 v2 API bridge as a DSH-managed child process. The ComfyUI address, listening port, public URL and API key are plugin config, so switching workflow servers does not touch code.",
+    "detail": "docs/DETAIL.md"
+  }
+}
